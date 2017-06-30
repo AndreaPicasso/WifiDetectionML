@@ -1,0 +1,3 @@
+#!/bin/sh
+tshark -Y 'wlan.sa > 0:0:0:0:0:0 && wlan.fc.type== 0 && wlan.fc.subtype == 4' -T fields -e wlan.sa  -e wlan_radio.signal_dbm -e frame.time  -e wlan_radio.channel -e wlan.seq -e wlan_mgt.ht.capabilities -e wlan_mgt.ht.ampduparam -e wlan_mgt.vht.capabilities -e wlan_mgt.supported_rates -e wlan_mgt.extended_supported_rates -e wlan_mgt.ht.mcsset.rxbitmask.0to7 -e wlan_mgt.ht.mcsset.rxbitmask.8to15 -e wlan_mgt.ht.mcsset.rxbitmask.16to23 -e wlan_mgt.ht.mcsset.rxbitmask.24to31 -e wlan_mgt.ht.mcsset.rxbitmask.32 -e wlan_mgt.ht.mcsset.rxbitmask.33to38 -e wlan_mgt.ht.mcsset.rxbitmask.39to52 -e wlan_mgt.ht.mcsset.rxbitmask.53to76 -e wlan_mgt.ssid -e wps.uuid_e 
+
