@@ -1,1 +1,15 @@
 https://joernhees.de/blog/2015/08/26/scipy-hierarchical-clustering-and-dendrogram-tutorial/
+
+problema:
+il concetto di densita o quello di varianza va pensato bene, almeno dobbiamo dare delle codifiche corrette di certi attributi
+a noi spesso interessa il concetto di distanza "se sono uguali sono uguali (distanza 0) se no la distanza è infinita" per questo forse non serve neanche un algoritmo
+di clustering "prefabbricato"
+
+esempio: ordered tag list con conversione
+list		->	conversione
+A: [x, y, z]	->	0
+B: [y, z, x]	->	1
+C: [x, z, y]	->	2
+
+con questa codifica stiamo dicendo che A e B sono più vicine di A e C ma per noi non è vero, sono semplicemente diverse
+stessa cosa per vendor ecc
